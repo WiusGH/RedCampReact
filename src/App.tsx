@@ -1,24 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import MatchTable from './components/MatchTable';
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+
 
 function App() {
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyBUJYtkKDkgW7NxrlNHmRdoN6HlTOmxinQ",
+    authDomain: "redcamp-cqb-db.firebaseapp.com",
+    projectId: "redcamp-cqb-db",
+    storageBucket: "redcamp-cqb-db.appspot.com",
+    messagingSenderId: "911256239",
+    appId: "1:911256239:web:30a33ca913495d1f61825a",
+    measurementId: "G-S2TN66K2FL"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <div className='main-container'>
+        <MatchTable />
+      </div>
+      <Footer />
     </div>
   );
 }

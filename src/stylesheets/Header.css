@@ -1,0 +1,29 @@
+.navbar {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 25px;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+}
+
+.logo {
+  border-radius: 50%;
+  width: 40px;
+}
+
+.nav li {
+  background-color: black;
+  border-radius: 12px;
+  list-style: none;
+  padding: 5px 15px;
+  margin-left: 20px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+}
